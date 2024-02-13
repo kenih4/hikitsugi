@@ -1,0 +1,91 @@
+・チョッパーパルサーのジッター ケーブル長を短く
+・RFDEF,CB18-1 AMP交換 IQ Ampの調整
+・CB07-4 
+・CB15-1
+・SB1 KLY変動　IQ&INV変更
+・SR入射
+・TIM変動 トリマ調整
+・MS Colimeter MD交換
+・CB2_2 流量計故障
+・CB15_3 収集おかしい
+・BL2 BPM回路交換
+・kickerの収集ゴミ
+・kickerの収集は1Hzで！
+・CB06-4 LNPSのVME電源がFault
+・CB03-1変動
+・CB08-3、CB15-3　同期収集のデータが抜け
+・ST_H_CB11のDAC値が正しく設定されない
+・光軸調整　BL3 OK、BL2ダメ
+・CB08-2ラック内のMLP異常
+・XSBT BPM増設作業
+・BL2 phase shifter step out error
+・CBC TCS
+・CB10-1 abnormal charge
+・CB18-2 TANK
+・CB6-1 高圧部交換
+・xfel_mon_bpm_bl3_1_1_2異常
+・xfmag-kickerゴミ溜まる
+・9keVシード出ず　結晶Y調整で出た
+・CB5-4 Tank
+・CB18-1 TRIG. RATEによりRF ON出来なくな
+・CB9-3リザーバー
+・SB2 40kVパラ作成
+・CB06-3　Trig BOX交換
+・xfel_vac_xsbt_2_vg_1　のSetpointのInterlockをDisableにした
+！VMEリブート時SW落とす
+！KickerのVMEリブート後ecat startする
+！結晶完全退避-5100以上
+
+------------------------
+・Q-BC1-3 PS Overheat
+・238MHz、SBの精密温調DC電源の流量計故障。
+　→238MHzについては、予備の電源と交換して復旧。SBは予備が無かった為、アラームを発報させている信号をショートさせて使用中
+・BT1 秒積算　安全
+・カソード1.3A
+・scllrf-s-sb 時刻ずれ 交換
+・GM電圧設定を変更
+・BPM BL1_0_6　さちる
+・CB1-3 IQ、ソレノイド変更
+・チョッパー変動　交換
+・CSR軸調整
+・CB1-1 Thy交換
+・複数MDAQ停止
+・scss_mon_bpm_bl1_predump_1のReference cavity amplitude over volotage
+・CB2-1　Thy交換
+・scmon-s-bc2 交換
+・bpm_bl1_0_6 Referenceサチ　Att追加
+・scss_mon_scm_bl1_3_2_1_stage_ccd/error_status で STEP OUT ERROR
+・GUNカソード変動
+------------------------
+・SR入射増　Sy RF ALC変動
+・バンチ純度　光軸絞り調整
+・SR入射減　線形位相PLL変動
+・BPM 11 (Cell2-5)のバランスエラー　マスク
+・四極電磁石補助電源28_1　交換
+・D冷凍機1台停止
+・CR1冷却水温度異常　熱電対を交換
+
+・BPM#144飛び
+・Bst パワーメータOFF/ON
+・B 水漏れ
+・C15 フィラ交換予定
+・Sy fb1-2削 Gun trigズレ　制御機器室温度変更
+・ホストsyrf2　pst16,17データ取得不可
+　PST16のGPIB-光変換コネクタ(受信側)の電源アダプタを引き抜で復旧
+・ID28 エンコーダsubに切り替え
+・H5 パルストランス電源交換予定
+・Li M18 STばらつき
+・バランスエラー Q6
+・H5 スタンバイパラ作成
+・Q AUX 33
+・ローカルバンプ作成時アボート
+・FS FB  HPRオーバー　ビームと508MHzの差が大きくなったためサチった。508ラインのトロンボーン調整
+・QP6電源のbypass電源電流変動
+・新電荷積算計タイミング調整
+・Li GUN MODのPFN電圧モニター値低下傾向（過去にはコンデン液もれらしい）
+・M8_mod HV_FANモジュール交換
+・Aゾーン　L3 給水
+・ID13定点観測更新
+・M18 スポットクーラー設置
+！SR RF初期化INIT送らない
+

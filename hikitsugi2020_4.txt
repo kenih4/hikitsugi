@@ -1,0 +1,57 @@
+・K値補正テーブル
+・CB02-1　リザーバー
+・CB8加速　
+・CB13-3 温調 PLCreboot
+・BL3先頭と次々のqstage MDリブート後パルスずれる
+  -> モータードライバのリブート後のQ-stageの状態で異常が発生する前のパルス値をORIGIN SETに設定することで復旧
+・STテーブル
+・CB16-4 水漏れ
+・CB6-4 VK出ず
+・CB10-3 Vk
+・60Hz BL3 9keVシード　LLRFおかしくVME ALL REBOOT
+・BL2 ハローモニタ　limit switch
+・LB逆走
+・CB05-2 TANK
+・CB17-4 高圧部
+　　リザーバ電圧を6.3V → 7.1Vに調整TAIL電流が下がり、G2トリガーの反射も減
+・BC1 Col, BC2,BC3スリット不純減る
+・CB08-2は通常のパルス幅で立ち上がらないようであればパルス幅を狭めて徐々に立ち上げるように指示を受けた。
+　また、CB08-2の真空悪化によりCB08-1が巻き込まれてトリップし、運転の中断が多発するようなら
+　CB08-1の真空インターロックの閾値を緩めるように指示を受けた。
+・CB07-3　CCG1　トリップ頻度多
+・CB05-4 トリガー発生器交換
+・CB13-3 TCS交換元戻した
+・CB13-3 Thy交換
+・FM変調ずれ
+・GUN TANK PRESSUER
+
+！GUN暫定対処 vkが312kV付近となる充電電圧(約20kV)を飛ばす
+！VMEリブート時SW落とす
+！KickerのVMEリブート後ecat startする
+！結晶完全退避-5100以上
+！CB08は加速電圧低い
+
+
+------------------------
+・ID10 5mm offset
+・Chopper 交換
+
+
+
+
+
+
+
+
+
+
+
+------------------------
+・COD　水平のCODが3mm（エラーソースは34セル付近）
+・E位相調整室内カウンタ故障　交換
+・RF Dst kly_fwd wargning上げ
+・XSBT電磁石アラーム 発報 "sr_mag_ps_b_xsbt_h_4/status" にて "Cooling Water
+　点検！
+・sr_vac_ivg_41_pb1/pressure”で、真空度が悪
+
+！SR RF初期化INIT送らない

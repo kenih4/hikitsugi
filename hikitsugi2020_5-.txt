@@ -1,0 +1,96 @@
+・CB07-3 KLY交換　改造ソレノイド
+・光路長FB　CB03-1のPV値が180deg反転
+・エージング中のCB07-3 真空悪化によるトリップが頻発した為、現場でCCG1の閾値を変更
+SP1 L : 9*E-6 → 4*E-5
+SP1 H : 1*E-5 → 5*E-5
+　機器保護CB06-4 GV、CB07-4 GVをDisableへ変更
+・XSBTロスモニタ温度上昇
+・xsbt_bpm 9, 22の変動大　Attが制御できないバグ
+・XSBTエネルギー調整CB17-3～CB18-2の位相を20degずらした。
+・5/11 空打ち電流値調整　元
+・SR パルスセプタム電磁石電源異常
+・BC2、BC3（MSBPM）のポジションが0㎜
+・CB13-3 ACC Water Temp alarm発生。
+・xfmag-kicker 1clockずれ
+・BL3コリメータ発狂　
+・TANK PRESSUREが発生したCB05-2　充電器受電部、充電器制御部、サイラトロン（L3 → e2v）の交換
+・マスター室の温調　フロート汚れ
+・xfel_vac_bl3_6_1_sip_3
+
+・TopUp中断発生時はBL2波長変更・調整中であった。
+　PLC画面を確認するとXSBT　TRANSMISSION RATIO　CHARGE LIMIT　FAIL　100％が発報していた。
+　運転インターロックのリセットを試みたが解消されず、なぜかBL2のチョッパーパーミッションOFFすることでリセットでき、Topup 入射を再開できた。
+
+
+
+・xfel_tmg_mtu_sync_mon_wait_turn/valueが下降傾向
+・CB08-2 現場で波形を確認しながらリザーバ電圧調整(6.2→6.5V)
+・CB13-3 温調ユニットをテストスタンド用温調ユニットへ交換開始
+　-.テストスタンド用温調ユニットではDBでデータが読めない為、元のユニットに戻した
+・MSの低ノイズ電源+5V出力低下　交換
+
+・Kickerパターン変更　#14 6/6
+・CB14-1 Thy交換 L3 -> e2V
+
+
+
+・6/14 SB3 真空悪化
+・6/15	剰余26からBL3へ5発連続で打つが、26から27でいきなりpositionが変わっている。その後ゆっくり変化しBL2へ打った後の剰余32のパルスでもとへ戻る。磁石のヒステリシスではなく、電源出力のヒステリシスの疑いあり。
+
+・xfel_mon_qstage_bl3_1_1_1_y　モータドライバーのOFF/ONで復旧
+・タッチパネルフリーズ対策ソフトの先行インストール(Hitz)をRF-Def , CB07-3
+
+
+
+
+
+
+・BL3 Self-seed
+
+Si(220)　：8.044keV　8GeV K2.5 不発
+
+Si(111)　：8.044keV　7GeV K2.1   13uJ　　　　
+	   →再挑戦　　7/6 22:05 30uJ 前段70->100uJ 
+
+Si(220)　：8.044keV　7GeV K2.1   11uJ  SASEが抜けてる
+
+
+
+
+
+
+！GUN暫定対処 vkが312kV付近となる充電電圧(約20kV)を飛ばす
+！VMEリブート時SW落とす
+！KickerのVMEリブート後ecat startする
+！結晶完全退避-5100以上
+！CB08は加速電圧低い
+！CB07-3
+　RF波形欠けの調査
+　FIR 0
+　シンチレータ設置
+  CCG1 setpoint Low4e-5→5e-5Pa High 5e-5→7e-5Pa
+！BM2は0.5Vを超えると、リニアリティ感度が鈍くなるので、0.5Vを目安にゲイン調整
+！BL側のデータベースに入っている"xfel_tmg_bt_un_2_route_inf/current"
+　xftmg-bt-un-2の設定を以下のコマンドで確認。
+　tellms get/xfel_tmg_bt_un_2_shmdaq_ema/status
+　以下のコマンドで収集周期を60Hzに変更した
+　tekkms put/xfel_tmg_bt_un_2_shmdaq_ema/interval2_1
+
+------------------------
+
+
+
+
+
+
+
+
+
+
+------------------------
+・SR B電磁石電源室の温度上昇に関して
+→6年前に増設された物で、最近増設されたものではないとのこと。
+
+
+
+！SR RF初期化INIT送らない

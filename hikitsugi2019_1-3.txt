@@ -1,0 +1,103 @@
+・LB,SB,CB1-3 Thy交換
+・CB1-3~2-4 120Hz
+・Coarse光源の入替 ドリフト解消
+・CB8-3	KLY交換
+・CTローパスフィルターの設置
+・L2扉故障
+・xfel_vac_bl2_1_2_sip_4コネクタ故障　監視トラブル
+・BL3_6_1_id1のPS MD電源切り入り
+・BL3の電荷積算トラブル ノイズが少ないチャンネルを使用するように変更しPH回路の閾値の調整
+・入出力特性をもとにIQ AMP設定
+・デバイスインターロックHV ALARM＆Master OscliatorがDisableになってた
+・LB pickupが停止前に比べて少し低
+・オンデマンド
+　xftmg-master-bkのインタラプトレジスタにトリガーが入れる必要あり
+　xftmg-master-bkでオンデマンド用プロセス
+・光軸調整　BL2が3回前に似た光軸になった	1/23
+・光学ハッチ１真空アラーム
+・BTA、分散部のBPMをデザイン値付近（BTA1_1:-2mm,BTA1_2:+2mm)に設定し、調整し直す。
+　Q_BTA_1,Q_BTA_13をそれぞれのBM電流値変更に対し、それ以降の軌道（ID内）が大きく変化しないように値を調整
+・BC2 CSRのPLC-BIC調査 8時間に一回エラーbitが立つ件について
+・Chopper INIHIBITION ERRORの件、PLC遅延修正　冬オンデマンド運転に対応する為光信号方式した
+・SB-3 Thy交換
+・RF整列 -> ダメ
+・SEED確認
+・L1 400V地絡警報 ニチコン120HzINV漏電多。閾値変更
+・XSBT 2/4
+・CB08_4 INV漏電
+・Chopper INIHIBITION ERROR 原因不明
+・BL2 14keV 8.1GeV 220uJ PS調整 
+・シード8.997keV　+1eVして調整すると1eV低いところにシードが立つ傾向だったが
+・マシン調整
+	MS CTフィルタ追加
+	CSRの通信途絶調査
+	476MHz DACボードの交換
+	XSBT電源室でQM電源のDB値異常の調査
+	BH4 DC化
+・シード10keV
+・アラーム履歴がDBで監視出来ない　監視プロセス再起動:Surveillance
+・CB09-2ソレノイド電源故障
+・CB5_3 Thy交換
+・エネルギー書き込みVer のID Tuning GUIは”xfel_id_tuning_energy_set.MM”を使用
+・MDAQ複数止
+・CB11_4 abn
+・10keVシード　111:90uJ, 220:140uJ
+・Ondemand　リフレクテブメモリVMEを落とすと他のVMEがエラーする
+・LB変動
+・MTU→MTCA　　もし戻すときは富樫に連絡！
+・SR入射パラ作成  CB1_3デバンチングにすると通らない
+・CB2_4 Thy交換焼け
+3/4	10keV	400/780uJ	30/30eV
+----------------
+・カソード交換　放射温度計直視に変更
+・238MHz　DC12Vアンプ電圧が停止前に比べ低
+・SB精密温調故障 復旧
+・GUN　Chopper とVkのタイミング調整 TDU Ch1,2,3を-106ns微調 2019/01/22 16:55:50 gun_dtube_vk_Ik set
+・SCSSの電荷積算で使用している電荷量。ChopperをONしていないにも関わらず電荷を計測
+  BT1の電荷積算がノイズを拾わない様に閾値が設定されている。ただし、較正が必要
+・CT 係数変更後のパラメータ　2019/01/23 17:38:09 safety E=0.800GeV CT Coef changed 
+・238MHz誘起位相測定時にATTが切り替わらない。DeviceNetの接続が切れた？PLCリブート復旧。
+・CB3_1 Libera配線まだ
+・GUN直下ML 15Aのパラメータ（今）
+　　　　 ML 16A CTを合わせようとするとこうなるらしい
+・挟み込んで、スリット調整、Qスキャン(BC1-2~BL1_0)、SB-12deg　ボツ
+・CB1_1 IQ Amp　0.46V→0.5V！
+・CB1-1, 2-1加速管軸ずれ
+・238MHz,476MHz amplitude目標値を変更！
+・エミッション電流を1.4A！
+・CT_238_1のATT 6dB→12dB！
+・過去の70eV ID ALLして安定に
+・476MHz 90k AMPの試験運転 
+	ML流量計交換
+・Q_BC2電源故障　SCSS+はQ,ST電源落ちてもデバイスインターロック立たない
+・scllrf-s-476のVME時刻がずれ 光受信機を交換
+・bc1_2カメラ交換ダメ、bc1_4 ND撤去予定
+・SB Thy交換 EOL焼け 温度計仕掛け
+・カロリメータは4/4or5　80,100,120eV
+・CB1-1 INV交換
+10/19	100eV 80uJ　GM校正
+12/19	100eV 60uJ　
+2/9	100eV 75uJ 1.4A
+3/10	100eV 70uJ 1A
+----------------
+・新ID34試験->COD変動
+・温度制御弁不具合
+・CODデータ取得用DB関数に不具合があり一つ前のものに戻して以降、閾値(400ms)以上の応答が増えている
+  400ms以上の遅延が50回連続した場合に補正を停止するGUI作成
+・バンチ純度悪　光量調整　1/23
+　測定精度を上げるためfront/rearの測定時間(daq_cnt_satellite  )を16→24へと伸ばした
+・ID34 Gap駆動時にid heightが変動 2/4調査予定
+　GAP28mmで焼き出し　Abortしたらフルオープンに！
+・sr_mag_ps_q_lss_b_9　オーブン異常
+　SR入射タイミングに同期してid34_ivg_1,2の真空度が変動
+・RFKO温度低下　熱電対位置変更
+・LLRF 未来のデータが入ってしまうので省く処理
+・SSBT2_2のコピー品のCT変動
+  電荷積算計の確認及びO/Eモジュール接地デジボル設置
+・M18_1垂直ステアリング変動
+・C21温度更新せず（次期リベラのため）
+・M12 真空悪化だがリザーバ調整予定
+・sr_mag_ps_q_lss_b_9恒温槽オーブン異常
+・M18 MODがDeQ回路の電圧過大または過小、高圧電流の過大
+・L1系冷却水流量低下
+・shutdown@VME onsen8b 2番:Restart
