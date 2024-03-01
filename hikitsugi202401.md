@@ -1,8 +1,9 @@
 Hikitsugi202401
 =============
 
-- [x] 1/15 キッカー電源予備機の不具合調整（tracking errorの解消）
-   調整の結果、キッカー電源予備機へのTDUからのトリガーを現状よりも200μs遅らせる必要があります。
+[u運転メモ](https://www.dropbox.com/scl/fi/p7tnd9io267d786ckmwv0/u.xlsx?rlkey=hmdz01hffkgcqiwu53bhm5kzx&dl=0)  
+
+- [x] 1/15 キッカー電源予備機の不具合調整（tracking errorの解消）。キッカー電源予備機へのTDUからのトリガーを現状よりも200μs遅らせる必要があります。
    なおキッカー１号機のトリガー（TDU別チャンネル）は変更の必要はありません。
   キッカーは今 MS-2本番機！ 10Hz 入射＃13でよい！！！！  MS-0(予備機)は 10Hz 入射は XSBT 10Hz, BL2 50Hz のパターン（#21）
 
@@ -25,7 +26,7 @@ Hikitsugi202401
 - [x] 2/1  [CB01-1 RF AMP Water 交換](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/02/2024_02_02_shift1.htm)  
 - [ ] 2/2  CB14_4 Thy交換
 - [ ] 2/8  CB18_1 Thy If 交換
-- [x] 2/8 エネルギーFBに用いているCB15-3、CB15-4の位相について当面±30deg.で運用する事となった。
+- [x] 2/8 エネルギーFBに用いているCB15-3、CB15-4の位相について当面±30deg.で運用
 - [ ] 2/9  CB17_1 Thy交換
 - [ ] 2/11 CB11-2 自爆 リザーバ 6.3->6.6V
 - [ ] 2/15 CB11-3 収納部内ダミーロード２用流量計で変動を計測
@@ -34,14 +35,17 @@ Hikitsugi202401
 - [ ] 2/18 CB07-4 THY 交換
 - [ ] 2/18 CB08_1 Tank
 - [ ] 2/19 CB13_4 MDO制御部、Thy交換  
-- [x] 2/19 BL2強度重視で調整  
+- [x] 2/19 BL2強度重視で調整
 - [x] 2/19 CB10_1 Thy交換 自爆多い様ならリザーバー6.0Vに
-- [x] 2/22 CB17-3 Thy交換 予定
+- [ ] 2/22 CB17-3 Thy交換
 - [ ] 2/26 CB11-2 Thy交換
-- [x] 2/26 光路長のドリフト 謎 ![代替](pic/20240228_光路長変動.png) ![代替](pic/20240228_光路長変動2.png)
+- [x] 2/26 光路長のドリフト CB1が顕著に見える　謎 ![代替](pic/20240228_光路長変動.png) ![代替](pic/20240228_光路長変動2.png)
 - [ ] 2/27 CB13-2 LNPS1 VMEシャーシ交換
 - [x] 2/28 msbpm_476_charge変動 強度には見えない![代替](pic/msbpm_476.png)  
 
+- SR運転終了時にXSBTのルート（運転管理インターロック）モードをOFFにすると
+ BL3若しくはBL2のエネルギー変更の際に、自動でXSBTルートを切り離す動作仕様となっている。
+- [120ppsINVユニットはPLCリブート注意](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/02/2024_02_02_shift1.htm)
 - GUN暫定対処 vkが312kV付近となる充電電圧(約20kV)を飛ばす
 - VMEリブート時SW落とす
 - KickerのVMEリブート後ecat startする(em_init)
@@ -59,8 +63,6 @@ Hikitsugi202401
  に各条件ごとにこの波形データをキャプチャーして残す様にとのこと。  
 - GUN abnormal charge発生時、自動で再立ち上げし30kV程度一気に昇圧している。この設定はGUNには必要ないため、restartの設定をdisableに変更する  
 - [マシンラーニング評価方法](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/01/2024_01_29_shift1.htm)  
-- SR運転終了時にXSBTのルート（運転管理インターロック）モードをOFFにすると
- BL3若しくはBL2のエネルギー変更の際に、自動でXSBTルートを切り離す動作仕様となっている。  
 
 > ベースパラメータ  
 プロファイル良  
@@ -84,6 +86,7 @@ SCSS+
 - [ ] 2/26 CB2-1 真空悪化対応としてPLCのVOLTAGE DIFFERENCEを5kV → 15kVに変更（自動立ち上げ復旧時の設定電圧にかけるオフセット）
 - [x] 2/26 GM1校正 100eV 90->125uJ
 
+- CB2-1 23kV付近で2値る
 - CB2-1 低エネルギー運転が継続する（波長変更が無い）場合にCB2-1の電圧を優先して下げる 2024/2/21
  Voltage difference（復旧時の設定電圧にかけるオフセット）を5kVから15kVに広げてみることを提案します。  
 - ゼロクロス msbpm_bc2-1で0.0mmに時のB_BC2偏向磁石電流値 19.815A。X位置：946.7pixel  
