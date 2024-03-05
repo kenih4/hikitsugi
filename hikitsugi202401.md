@@ -41,8 +41,11 @@ Hikitsugi202401
 - [ ] 2/26 CB11-2 Thy交換
 - [x] 2/26 光路長のドリフト CB1が顕著に見える　謎 ![代替](pic/20240228_光路長変動.png) ![代替](pic/20240228_光路長変動2.png)
 - [ ] 2/27 CB13-2 LNPS1 VMEシャーシ交換
-- [x] 2/28 msbpm_476_charge変動 強度には見えない![代替](pic/msbpm_476.png)  
+- [x] 2/28 msbpm_476_charge変動 強度に影響なし![代替](pic/msbpm_476.png)  
+- [x] 3/4 C09_1 Vk  停止期間Thy交換予定
+- [ ] 3/4 加速器の状態を大きく変更しての測定を実施　バーグマンG
 
+- LNPS交換はデバイスインターロックLNPS,RACK2をDisableに。LNPS1だけ交換する時でも、LNPS2との接続が切れるためデバイスインターロックが発報する。
 - SR運転終了時にXSBTのルート（運転管理インターロック）モードをOFFにすると
  BL3若しくはBL2のエネルギー変更の際に、自動でXSBTルートを切り離す動作仕様となっている。
 - [120ppsINVユニットはPLCリブート注意](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/02/2024_02_02_shift1.htm)
@@ -85,16 +88,18 @@ SCSS+
 - [ ] 2/25 CB2-1 Abnormal Charge リザーバ電圧を-0.6V(6.3V → 5.7V)した所、定格まで立ち上がった。
 - [ ] 2/26 CB2-1 真空悪化対応としてPLCのVOLTAGE DIFFERENCEを5kV → 15kVに変更（自動立ち上げ復旧時の設定電圧にかけるオフセット）
 - [x] 2/26 GM1校正 100eV 90->125uJ
+- [x] 3/2 エミッション電流が通常1Aの所、2A出射 謎
+      - [設定値に対して±１V以上の偏差でアラート発報。±0.5Vでワーニング](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SCSS/operation_log/2024/03/2024_03_04_shift1.htm)  
 
 - CB2-1 23kV付近で2値る
-- CB2-1 低エネルギー運転が継続する（波長変更が無い）場合にCB2-1の電圧を優先して下げる 2024/2/21
- Voltage difference（復旧時の設定電圧にかけるオフセット）を5kVから15kVに広げてみることを提案します。  
+- CB2-1 低エネルギー運転が継続する（波長変更が無い）場合にCB2-1の電圧を優先して下げる 2024/2/21  
 - ゼロクロス msbpm_bc2-1で0.0mmに時のB_BC2偏向磁石電流値 19.815A。X位置：946.7pixel  
  YAG蛍光の余計な成分を含めてフィッティングを行いたくない為、プロファイル範囲の垂直ピクセル(上下)を確認し、ゼロクロスGUIのVertical ROIを設定してフィッティングを行う事。  
  バンチングとデバンチングで垂直位置が異なる場合にはBC2入口のSTでプロファイル位置を合わせる。  
 - CTはADのstop/startを行うと収集が遅れる事象がある事  
 - scmag-s-mag のマグネット DACがゼロになった際、RCSを設定すると出力OFFになるので注意！  
 - GM電圧設定、子パネルからするとGUIが落ちるのでFrontのパネルから  
+- [誘起位相測定時に238MHzのATTが切り替わらない](http://saclaopr19.spring8.or.jp/~lognote/SCSS/operation_log/2023/02/2023_02_22_shift2.htm)  
 
 ---  
 
