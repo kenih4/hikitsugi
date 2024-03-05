@@ -2,6 +2,7 @@ Hikitsugi202401
 =============
 
 [u運転メモ](https://www.dropbox.com/scl/fi/p7tnd9io267d786ckmwv0/u.xlsx?rlkey=hmdz01hffkgcqiwu53bhm5kzx&dl=0)  
+[ログサーチ](http://saclaopr19.spring8.or.jp/~logsearch/)  
 
 - [x] 1/15 キッカー電源予備機の不具合調整（tracking errorの解消）。キッカー電源予備機へのTDUからのトリガーを現状よりも200μs遅らせる必要があります。
    なおキッカー１号機のトリガー（TDU別チャンネル）は変更の必要はありません。
@@ -42,7 +43,7 @@ Hikitsugi202401
 - [x] 2/26 光路長のドリフト CB1が顕著に見える　謎 ![代替](pic/20240228_光路長変動.png) ![代替](pic/20240228_光路長変動2.png)
 - [ ] 2/27 CB13-2 LNPS1 VMEシャーシ交換
 - [x] 2/28 msbpm_476_charge変動 強度に影響なし![代替](pic/msbpm_476.png)  
-- [x] 3/4 C09_1 Vk  停止期間Thy交換予定
+- [x] 3/4 C09_1 Thy交換予定
 - [ ] 3/4 加速器の状態を大きく変更しての測定を実施　バーグマンG
 
 - LNPS交換はデバイスインターロックLNPS,RACK2をDisableに。LNPS1だけ交換する時でも、LNPS2との接続が切れるためデバイスインターロックが発報する。
@@ -60,10 +61,8 @@ Hikitsugi202401
 - Q_BL3_0_1はBL2に影響あるから注意  
 - BL2,BL3共に、I-specで見える波長はfilmに対してcapillaryは波長が20~30eV程度低めに見えている  
 - 2023年4月よりreferenceを8 GeV、K=2.18 10 keV  
-- カソードが真空で落ちた場合30Vまで一気に上げて5V/min  
-- カソード交換前のデータ取得の際には、この波形を制御室から確認してデータを取得する。  
- また、入射部のプロファイル取得時（238,476RF OFFの入射部プロファイル取得時）
- に各条件ごとにこの波形データをキャプチャーして残す様にとのこと。  
+- [カソードが真空で落ちた場合](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2023/04/2023_04_07_shift1.htm)  
+- [壁電流](http://saclaopr19.spring8.or.jp/~lognote/SACLA/operation_log/2023/08/2023_08_01_shift1.htm) 　
 - GUN abnormal charge発生時、自動で再立ち上げし30kV程度一気に昇圧している。この設定はGUNには必要ないため、restartの設定をdisableに変更する  
 - [マシンラーニング評価方法](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/01/2024_01_29_shift1.htm)  
 
@@ -133,10 +132,9 @@ SR
 MEMO
 ---  
 
-> プロファイル改善調整案
-
-- BTAの真ん中のQM(Q_BTA_07)を個別に調整
-- ベンドの間のQM(Q_BTA_01,13の調整)  
-- ベンドの角度を変える(上流(kicker+B_BTA_01のセット)と下流(B_BTA_02)の値の上下流でバランスを変えてみる)  
-- BTA以降のQ-Magを－200MeV程度スケール。
+> プロファイル改善調整案  
+・BTAの真ん中のQM(Q_BTA_07)を個別に調整
+・ベンドの間のQM(Q_BTA_01,13の調整)  
+・ベンドの角度を変える(上流(kicker+B_BTA_01のセット)と下流(B_BTA_02)の値の上下流でバランスを変えてみる)  
+・BTA以降のQ-Magを－200MeV程度スケール。
 これにより強度は300uJ程度に下がったがプロファイルが丸くなった。  
