@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+SRだけSystem KEY STOPにする
+
+SACLA -> Sy Dumpに向けるとSRだけ切り離される
+
+
+
+
+
+
+
