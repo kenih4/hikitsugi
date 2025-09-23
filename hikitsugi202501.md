@@ -1,4 +1,4 @@
-Hikitsugi202401
+Hikitsugi202501
 =============
 
 [u運転メモ](https://www.dropbox.com/scl/fi/p7tnd9io267d786ckmwv0/u.xlsx?rlkey=hmdz01hffkgcqiwu53bhm5kzx&dl=0)  
@@ -397,6 +397,7 @@ SR
       VAC
         CRAB交換(C39、C40、C41)
         IVGフィラメント交換(C16PB2)
+        C48 TSPフラッシング(ここは真空が良くないセルなので停止期間毎におこなってる)
       
       RF
         空洞Pickup信号に信号分配器追加　(9/25のコミッショニング時に実施予定)
