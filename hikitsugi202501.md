@@ -96,8 +96,8 @@ BTA のシャッターを開き、GUIよりエネルギー変更シーケンス�
 - [ ] 7/28 CB12-3 RandK　ドライバアンプ用ケーブルに交換
 - [ ] 
 > 2025夏作業
-・ SACLAのchopperを入れ替え
-・ GUN,SB4,CB01-1,CB01-2,CB02-2　Thy Heater トランスもタップ付へ  ヒーター出力を下げて延命化試験
+・SACLAのchopperを入れ替え
+・GUN,SB4,CB01-1,CB01-2,CB02-2　Thy Heater トランスもタップ付へ  ヒーター出力を下げて延命化試験
 - [ ] 9/17  CB08-1　カナデヴィア立ち合いの元、通信試験開始（1Hz)
 - [ ] 9/17  Kickerの電源がOFFになっていたことに気づく。SICunit Overcurrentのアラームが立っていた。
           同時刻、SRの入射バケットのタイミングを調整した際、xfel_tmg_mtu_sync_mon_wait_turn/valueが60turn以上の値になったため上記アラームが発報した模様。
