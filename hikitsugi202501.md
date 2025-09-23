@@ -160,50 +160,47 @@ BTA のシャッターを開き、GUIよりエネルギー変更シーケンス�
   - カソード交換後　2025/07/02 00:59:27 BL2=7.976GeV,10keV 380uJ, BL3=7.976GeV,10keV 640uJ
   - 2025/06/30 06:50:26 BL2=7.976GeV,10keV,410uJ BL3=7.976GeV,10.5keV,730uJ
 
--MCH（μTCA管理モジュール）のログを取得し連絡するように指示を受けた (保存名:ホスト,日付)		他指示：2025/6/18ログ 			
+- 引継ぎ：
+  - MCH（μTCA管理モジュール）のログを取得し連絡するように指示を受けた (保存名:ホスト,日付)		他指示：2025/6/18ログ 			
 以下のページ(制御LAN）					
 http://xfmonmng-btb-01.xfel.cntl.local/index.asp					
 ①左の欄よりSystem Informationを押す（図の画面になる）					
 ②collect system information nowボタンを押す。テキスト保存画面が出るのでホスト名、日付をつけて保存。					
 ③細田さんに連絡（メールなどで良い）
 7/16にも記載
-- 2025/02/02にも同様にTHYによる変動が発生している。当時の対処案
-- q_bta_07を中心に四極電磁石の電流値が左右対称になる様にして調整する様に指示を受けた。個別に調整しないこと
-- マシンラーニングBL2+BL3はBM1しか使えない
--ソレノイド流量INTLKのLV/HV区分ですが、それまでは、流量低下によってLV OFFの処置をしていましたが、
+  - q_bta_07を中心に四極電磁石の電流値が左右対称になる様にして調整する様に指示を受けた。個別に調整しないこと
+  - マシンラーニングBL2+BL3はBM1しか使えない
+  - ソレノイド流量INTLKのLV/HV区分ですが、それまでは、流量低下によってLV OFFの処置をしていましたが、
 　変更後は、基本的にはHV OFFとしています。（モジュレータの流量低だけ、20sの遅延でLV OFF）
 但し、集束コイル電流はOFFになるので、LV機器が通電されていない「LV未完了」のような状態になる
-- 毎週月曜にMLをMLで振るように　カソードの変化に対応したい
-- 476MHz SSAアラーム発報時、指示有 20231127Teams
-- 機器保護インターロックシステムに於て発報中のアラームとその復帰方法Teams 2024/3/22
-- LNPS交換はデバイスインターロックLNPS,RACK2をDisableに。LNPS1だけ交換する時でも、LNPS2との接続が切れるためデバイスインターロックが発報する。
-- SR運転終了時にXSBTのルート（運転管理インターロック）モードをOFFにすると
- BL3若しくはBL2のエネルギー変更の際に、自動でXSBTルートを切り離す動作仕様となっている。
-- [120ppsINVユニットはPLCリブート注意](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/02/2024_02_02_shift1.htm)
-- GUN暫定対処 vkが312kV付近となる充電電圧(約20kV)を飛ばす
-- VMEリブート時SW落とす
-- KickerのVMEリブート後ecat startする(em_init)
-- 結晶完全退避-5200以上  
-- CB08は加速電圧低い  
-- BM2は0.5Vを超えると、リニアリティ感度が鈍くなるので、0.5Vを目安にゲイン調整  
-- SACLA スイーパー用タイミング TDU LBC  
+  - 毎週月曜にMLをMLで振るように　カソードの変化に対応したい
+  - 476MHz SSAアラーム発報時、指示有 20231127Teams
+  - 機器保護インターロックシステムに於て発報中のアラームとその復帰方法Teams 2024/3/22
+  - LNPS交換はデバイスインターロックLNPS,RACK2をDisableに。LNPS1だけ交換する時でも、LNPS2との接続が切れるためデバイスインターロックが発報する。
+  - SR運転終了時にXSBTのルート（運転管理インターロック）モードをOFFにすると BL3若しくはBL2のエネルギー変更の際に、自動でXSBTルートを切り離す動作仕様となっている。
+  - [120ppsINVユニットはPLCリブート注意](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/02/2024_02_02_shift1.htm)
+  - GUN暫定対処 vkが312kV付近となる充電電圧(約20kV)を飛ばす
+  - VMEリブート時SW落とす
+  - KickerのVMEリブート後ecat startする(em_init)
+  - 結晶完全退避-5200以上  
+  - CB08は加速電圧低い  
+  - BM2は0.5Vを超えると、リニアリティ感度が鈍くなるので、0.5Vを目安にゲイン調整  
+  - SACLA スイーパー用タイミング TDU LBC  
  スイーパーの高圧ON/OFFした時など垂直軌道を補正する時は、スイーパー直近のST_inj_LB_1の垂直BPM_SB_1_yを戻す。  
-- Q_BL3_0_1はBL2に影響あるから注意  
-- BL2,BL3共に、I-specで見える波長はfilmに対してcapillaryは波長が20~30eV程度低めに見えている  
-- 2023年4月よりreferenceを8 GeV、K=2.18 10 keV  
-- [カソードが真空で落ちた場合](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2023/04/2023_04_07_shift1.htm)  
-- [壁電流](http://saclaopr19.spring8.or.jp/~lognote/SACLA/operation_log/2023/08/2023_08_01_shift1.htm) 　
-- GUN abnormal charge発生時、自動で再立ち上げし30kV程度一気に昇圧している。この設定はGUNには必要ないため、restartの設定をdisableに変更する  
-- [マシンラーニング評価方法](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/01/2024_01_29_shift1.htm)  
+  - Q_BL3_0_1はBL2に影響あるから注意  
+  - BL2,BL3共に、I-specで見える波長はfilmに対してcapillaryは波長が20~30eV程度低めに見えている  
+  - 2023年4月よりreferenceを8 GeV、K=2.18 10 keV  
+  - [カソードが真空で落ちた場合](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2023/04/2023_04_07_shift1.htm)  
+  - [壁電流](http://saclaopr19.spring8.or.jp/~lognote/SACLA/operation_log/2023/08/2023_08_01_shift1.htm) 　
+  - GUN abnormal charge発生時、自動で再立ち上げし30kV程度一気に昇圧している。この設定はGUNには必要ないため、restartの設定をdisableに変更する  
+  - [マシンラーニング評価方法](http://saclaopr19.spring8.or.jp/~logsearch/viewer/?SACLA/operation_log/2024/01/2024_01_29_shift1.htm)  
 
 > ベースパラメータ  
 ・プロファイル良  
 ・スペクトル良  
 ・強度重視  
 ・前段多いパラメータ  
-　2024/02/05 22:35:43 7.976/7.976GeV BL2 10keV 430uJ/BL3 10keV 700uJ(ID8-210uJ)  
 ・前段少ない＆プロファイル良  
-　2024/02/19 17:18:32 7.976/7.976GeV BL2 10.0keV 300uJ/BL3 10.0keV 600uJ +-30degree
 
 
 
