@@ -418,6 +418,9 @@ Q_08を６A、14を12A増やしてdispersionを補正。
     Q_BC1_3（B）D ⇒ Q_BC1_3（B）F	 
     Q_BC1_6（B）D ⇒ Q_BC1_6（B）F	 
     Q_BC3_01（B）D ⇒ Q_BC3_01（B）F
+  ・BL3 X-BAND導入により、四極電磁石の極性を変更
+
+  
 
 
 - 注意
@@ -472,7 +475,7 @@ Q_08を６A、14を12A増やしてdispersionを補正。
   - MCH（μTCA管理モジュール）のログを取得し連絡するように指示を受けた (保存名:ホスト,日付)		他指示：2025/6/18ログ 			
     以下のページ(制御LAN）					
     http://xfmonmng-btb-01.xfel.cntl.local/index.asp					
-    ①左の欄よりSystem Informationを押す（図の画面になる）					
+    ①左の欄よりSystem Informationを押す				
     ②collect system information nowボタンを押す。テキスト保存画面が出るのでホスト名、日付をつけて保存。					
     7/16にも記載
   - q_bta_07を中心に四極電磁石の電流値が左右対称になる様にして調整する様に指示を受けた。個別に調整しないこと
